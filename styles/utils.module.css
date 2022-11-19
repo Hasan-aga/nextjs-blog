@@ -5,6 +5,8 @@
   letter-spacing: -0.05rem;
   margin: 1rem 0;
   color: #e07a5f;
+
+  text-transform: uppercase;
 }
 
 .headingXl {
@@ -14,6 +16,7 @@
   letter-spacing: -0.05rem;
   margin: 1rem 0;
   color: #81b29a;
+  text-transform: uppercase;
 }
 
 .headingLg {

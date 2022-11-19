@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
+import PrettyDate from "../components/prettyDate";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../utils/processPost";
 
@@ -20,6 +21,10 @@ export default function Home({ posts }) {
         {posts.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>{title}</Link>
+            <br />
+            <small className={utilStyles.lightText}>
+              <PrettyDate dateString={date} />
+            </small>
           </li>
         ))}
       </section>

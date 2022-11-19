@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../utils/processPost";
@@ -18,11 +19,7 @@ export default function Home({ posts }) {
         </p>
         {posts.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
-            {title}
-            <br />
-            {id}
-            <br />
-            {date}
+            <Link href={`/posts/${id}`}>{title}</Link>
           </li>
         ))}
       </section>
